@@ -15,7 +15,7 @@ const ErrorModal = ({ title, message, onHandleError }) => {
           <p>{message}</p>
         </div>
         <footer className={classes.actions}>
-          <Button onClick={onHandleError}>WTF Okay</Button>
+          <Button onClick={onHandleError}>Okay</Button>
         </footer>
       </Card>
     </div>

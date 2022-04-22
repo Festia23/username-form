@@ -17,8 +17,8 @@ const AddUsers = ({ onAddUser }) => {
     if (!username || !age || !job || !email) {
       //   setIsvalid(false);
       setError({
-        title: "You idiot!Fucking Error occured!",
-        message: "Bir seyler yolunda degil ve ben iyi degilim!",
+        title: "An Error occured!",
+        message: "Please enter a valid information (non-empty values)!",
       });
       return;
     }
@@ -109,11 +109,6 @@ const AddUsers = ({ onAddUser }) => {
 
           <Button type="submit">Submit</Button>
           {/* {!isValid && <p>Please enter a fucking valid information!</p>} */}
-          {/* <select>
-        <option>fuck them all</option>
-        <option>fuck them all</option>
-        <option>fuck them all</option>
-      </select> */}
         </form>
       </Card>
     </div>
