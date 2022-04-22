@@ -10,9 +10,14 @@ const App = () => {
     console.log(user);
   };
 
+  const checkEmail = (email) => {
+    const user = users.find((user) => user.email === email);
+    return user ? false : true;
+  };
+
   return (
     <div>
-      <AddUsers onAddUser={onAddUserHandler} />
+      <AddUsers checkEmail={checkEmail} onAddUser={onAddUserHandler} />
       <AddUserList users={users} />
     </div>
   );

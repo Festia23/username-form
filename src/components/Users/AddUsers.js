@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 import classes from "./AddUser.module.css";
 import ErrorModal from "../UI/ErrorModal";
 
-const AddUsers = ({ onAddUser }) => {
+const AddUsers = ({ onAddUser, checkEmail }) => {
   //   const [isValid, setIsvalid] = useState(true);
   const [username, setUsername] = useState("");
   const [age, setAge] = useState("");
@@ -19,6 +19,15 @@ const AddUsers = ({ onAddUser }) => {
       setError({
         title: "An Error occured!",
         message: "Please enter a valid information (non-empty values)!",
+      });
+      return;
+    }
+
+    if (!checkEmail(email)) {
+      setError({
+        title: "An Error Occured",
+        message:
+          "This email is already taken, please enter an another valid email",
       });
       return;
     }
