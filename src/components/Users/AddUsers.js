@@ -32,6 +32,14 @@ const AddUsers = ({ onAddUser, checkEmail }) => {
       return;
     }
 
+    if (age < 1) {
+      setError({
+        title: "An error occured",
+        message: "Please enter a valid age!",
+      });
+      return;
+    }
+
     const user = {
       username,
       age,
