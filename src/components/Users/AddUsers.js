@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import classes from "./AddUser.module.css";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../HelperTools/Wrapper";
 
 const AddUsers = ({ onAddUser, checkEmail }) => {
   //   const [isValid, setIsvalid] = useState(true);
@@ -75,7 +76,7 @@ const AddUsers = ({ onAddUser, checkEmail }) => {
     setError(null);
   };
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -128,7 +129,7 @@ const AddUsers = ({ onAddUser, checkEmail }) => {
           {/* {!isValid && <p>Please enter a fucking valid information!</p>} */}
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
